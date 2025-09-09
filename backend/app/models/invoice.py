@@ -2,7 +2,7 @@ from sqlalchemy import Column, Integer, String, DateTime, Text, ForeignKey, Enum
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from enum import Enum as PyEnum
-from app.db.base import Base
+from app.db.base_class import Base
 
 
 class InvoiceStatus(PyEnum):

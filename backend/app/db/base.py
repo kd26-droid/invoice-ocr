@@ -1,10 +1,4 @@
-from sqlalchemy import create_engine
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
-
-from app.core.config import settings
-
-engine = create_engine(settings.DATABASE_URL or "sqlite:///./test.db")
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-
-Base = declarative_base()
+# Import all models here to ensure they are registered with SQLAlchemy
+from app.db.base_class import Base  # noqa
+from app.models.user import User  # noqa
+from app.models.invoice import Invoice  # noqa

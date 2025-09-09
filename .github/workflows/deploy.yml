@@ -36,6 +36,8 @@ jobs:
         tags: ${{ env.CONTAINER_REGISTRY }}/backend:${{ github.sha }},${{ env.CONTAINER_REGISTRY }}/backend:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        build-args: |
+          BUILDPLATFORM=linux/amd64
 
   build-frontend:
     runs-on: ubuntu-latest
@@ -61,6 +63,8 @@ jobs:
         tags: ${{ env.CONTAINER_REGISTRY }}/frontend:${{ github.sha }},${{ env.CONTAINER_REGISTRY }}/frontend:latest
         cache-from: type=gha
         cache-to: type=gha,mode=max
+        build-args: |
+          BUILDPLATFORM=linux/amd64
 
   deploy-backend:
     runs-on: ubuntu-latest
