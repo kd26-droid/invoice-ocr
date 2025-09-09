@@ -1,18 +1,14 @@
-import { Routes, Route } from 'react-router-dom'
-import { Dashboard } from './pages/Dashboard'
-import { Login } from './pages/Login'
-import { InvoiceDetail } from './pages/InvoiceDetail'
-import { Upload } from './pages/Upload'
-
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/upload" element={<Upload />} />
-        <Route path="/invoices/:id" element={<InvoiceDetail />} />
-      </Routes>
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          Invoice OCR System
+        </h1>
+        <p className="text-gray-600">
+          FastAPI + React + Azure - Coming Soon!
+        </p>
+      </div>
     </div>
   )
 }
